@@ -13,39 +13,7 @@ This pipeline uses faster-whisper, a CTranslate2-optimised reimplementation of W
 Most transcription tools send your audio to a remote server. For music content pipelines — where licensing and data sovereignty matter — local inference is the only viable approach.
 This pipeline uses faster-whisper, a CTranslate2-optimised reimplementation of Whisper that runs efficiently on CPU, making it accessible without GPU hardware.
 ## Quickstart
-1. Prerequisites
-- macOS (tested on macOS 13+) or Linux
-- Python 3.11
-- ffmpeg
-Install ffmpeg on Mac:
-、、、
-brew install ffmpeg
-、、、
-2. Install dependencies
-、、、
-pip3 install faster-whisper
-、、、
-3. Run the pipeline
-、、、
-python3 -c "
-from faster_whisper import WhisperModel
 
-model = WhisperModel('small', device='cpu')
-segments, _ = model.transcribe(
-    'your_audio_file.m4a',
-    language='zh'        # change to your target language
-)
-
-with open('output.lrc', 'w', encoding='utf-8') as f:
-    for segment in segments:
-        minutes = int(segment.start // 60)
-        seconds = segment.start % 60
-        f.write(f'[{minutes:02d}:{seconds:05.2f}]{segment.text.strip()}\n')
-
-print('Done — output saved to output.lrc')
-"
-、、、
-Replace your_audio_file.m4a with your audio path and set language to your target language code (e.g. zh, en, vi, id).
 ## Output format
 The pipeline generates standard .lrc format:
 、、、
