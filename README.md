@@ -16,7 +16,7 @@ This pipeline uses faster-whisper, a CTranslate2-optimised reimplementation of W
 
 ### 1. Prerequisites
 
-- macOS (tested on macOS 13+) or Linux
+- macOS (tested on macOS Tahoe 26)
 - Python 3.11
 - ffmpeg
 
