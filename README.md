@@ -9,9 +9,6 @@ All processing happens on your machine — audio never leaves your device
 ## Why local deployment matters
 Most transcription tools send your audio to a remote server. For music content pipelines — where licensing and data sovereignty matter — local inference is the only viable approach.
 This pipeline uses faster-whisper, a CTranslate2-optimised reimplementation of Whisper that runs efficiently on CPU, making it accessible without GPU hardware.
-## Why local deployment matters
-Most transcription tools send your audio to a remote server. For music content pipelines — where licensing and data sovereignty matter — local inference is the only viable approach.
-This pipeline uses faster-whisper, a CTranslate2-optimised reimplementation of Whisper that runs efficiently on CPU, making it accessible without GPU hardware.
 ## Quickstart
 
 ### 1. Prerequisites
