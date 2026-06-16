@@ -57,11 +57,11 @@ Replace `your_audio_file.m4a` with your audio path and set `language` to your ta
 
 ## Output format
 The pipeline generates standard .lrc format:
-、、、
+```
 [00:03.20] lyrics
 [00:08.45] lyrics
 [00:13.10] lyrics
-、、、
+```
 Compatible with most music players, karaoke apps, and lyrics display systems.
 
 ---
